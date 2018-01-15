@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TiTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnh-mT-6MQ">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="网址" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mMy-3c-8q8">
+                                        <rect key="frame" x="10" y="8" width="597" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="go"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVI-c8-eWk">
+                                        <rect key="frame" x="627" y="16" width="30" height="18"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Go"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmK-b3-5oI">
+                                        <rect key="frame" x="630" y="44" width="27" height="18"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="&lt;-"/>
+                                        <connections>
+                                            <action selector="goback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rPY-kn-Qim"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlO-qA-giR">
+                                        <rect key="frame" x="630" y="72" width="27" height="18"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="-&gt;"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-4Y-4p8">
+                                        <rect key="frame" x="606" y="100" width="51" height="18"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Home"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGT-b2-ZVj">
+                                        <rect key="frame" x="626" y="128" width="31" height="18"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="vip"/>
+                                    </button>
+                                    <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjl-T7-wai">
+                                        <rect key="frame" x="0.0" y="38" width="606" height="337"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mMy-3c-8q8" secondAttribute="trailing" constant="60" id="2kg-Hd-rX3"/>
+                                    <constraint firstItem="JVI-c8-eWk" firstAttribute="top" secondItem="pnh-mT-6MQ" secondAttribute="top" constant="16" id="7D7-sv-FiO"/>
+                                    <constraint firstItem="WGT-b2-ZVj" firstAttribute="top" secondItem="vWg-4Y-4p8" secondAttribute="bottom" constant="10" id="7PV-Ob-adU"/>
+                                    <constraint firstAttribute="trailing" secondItem="xmK-b3-5oI" secondAttribute="trailing" constant="10" id="7kK-uU-p6L"/>
+                                    <constraint firstItem="mMy-3c-8q8" firstAttribute="leading" secondItem="pnh-mT-6MQ" secondAttribute="leading" constant="10" id="84c-kh-xTK"/>
+                                    <constraint firstAttribute="trailing" secondItem="mlO-qA-giR" secondAttribute="trailing" constant="10" id="Lgx-rR-DCN"/>
+                                    <constraint firstItem="vWg-4Y-4p8" firstAttribute="top" secondItem="mlO-qA-giR" secondAttribute="bottom" constant="10" id="O5V-Yx-3KW"/>
+                                    <constraint firstAttribute="trailing" secondItem="JVI-c8-eWk" secondAttribute="trailing" constant="10" id="QKk-jU-fex"/>
+                                    <constraint firstItem="bjl-T7-wai" firstAttribute="leading" secondItem="pnh-mT-6MQ" secondAttribute="leading" id="UPI-KN-om6"/>
+                                    <constraint firstAttribute="trailing" secondItem="vWg-4Y-4p8" secondAttribute="trailing" constant="10" id="WUj-y8-zS7"/>
+                                    <constraint firstItem="vWg-4Y-4p8" firstAttribute="leading" secondItem="bjl-T7-wai" secondAttribute="trailing" id="Yfd-oq-Gd4"/>
+                                    <constraint firstItem="mlO-qA-giR" firstAttribute="top" secondItem="xmK-b3-5oI" secondAttribute="bottom" constant="10" id="cpz-l9-CRn"/>
+                                    <constraint firstItem="bjl-T7-wai" firstAttribute="top" secondItem="mMy-3c-8q8" secondAttribute="bottom" id="dw4-N9-3ix"/>
+                                    <constraint firstItem="xmK-b3-5oI" firstAttribute="top" secondItem="JVI-c8-eWk" secondAttribute="bottom" constant="10" id="lq5-Sn-1RK"/>
+                                    <constraint firstAttribute="trailing" secondItem="WGT-b2-ZVj" secondAttribute="trailing" constant="10" id="oNp-Nz-mRN"/>
+                                    <constraint firstAttribute="bottom" secondItem="bjl-T7-wai" secondAttribute="bottom" id="qY6-Op-4cO"/>
+                                    <constraint firstItem="mMy-3c-8q8" firstAttribute="top" secondItem="pnh-mT-6MQ" secondAttribute="top" constant="8" id="uDi-HZ-WsJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pnh-mT-6MQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9oR-ZB-833"/>
+                            <constraint firstItem="pnh-mT-6MQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="REg-Ur-BOZ"/>
+                            <constraint firstItem="pnh-mT-6MQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="XcR-Ac-h5t"/>
+                            <constraint firstItem="pnh-mT-6MQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="ram-vU-dy3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="xmK-b3-5oI" id="0UC-JP-RND"/>
+                        <outlet property="btnVip" destination="WGT-b2-ZVj" id="UTA-Zu-FWh"/>
+                        <outlet property="textField" destination="mMy-3c-8q8" id="979-TN-W9y"/>
+                        <outlet property="webview" destination="bjl-T7-wai" id="Ov6-1u-O0u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.576086956521742" y="113.04347826086958"/>
+        </scene>
+    </scenes>
+</document>
